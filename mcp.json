@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "paper-search-mcp": {
+      "command": "python",
+      "args": ["-m", "paper_search_mcp.server"],
+      "env": {
+        "PAPER_SEARCH_MCP_UNPAYWALL_EMAIL": "your-email@example.com",
+        "PAPER_SEARCH_MCP_SEMANTIC_SCHOLAR_API_KEY": "",
+        "PAPER_SEARCH_MCP_CORE_API_KEY": "",
+        "PAPER_SEARCH_MCP_IEEE_API_KEY": "",
+        "PAPER_SEARCH_MCP_ACM_API_KEY": "",
+        "PAPER_SEARCH_MCP_ZENODO_ACCESS_TOKEN": "",
+        "PAPER_SEARCH_MCP_GOOGLE_SCHOLAR_PROXY_URL": "",
+        "PAPER_SEARCH_MCP_DOAJ_API_KEY": ""
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--browser=msedge"]
+    },
+    "google-scholar": {
+      "command": "python",
+      "args": ["google_scholar_server.py"]
+    }
+  }
+}
